@@ -1,6 +1,6 @@
 cmake是一个构建器，它负责生成编译规则，告诉真正的编译器，比如g++如何编译这个项目
 
-![[Pasted image 20260824104922.png]]
+![[photo/Pasted image 20260824104922.png]]
 
 
 
@@ -208,7 +208,7 @@ set(LIBRARY_OUTPUT_PATH 路径)//指定库的输出路径
 
 
 
-![[Pasted image 20260820162220.png]]
+![[photo/Pasted image 20260820162220.png]]
 
 
 # 变量操作（Cmake一切皆字符串）
@@ -309,7 +309,7 @@ list(REVERSE 列表变量名)
 ```cpp
 list(SORT 列表变量名 排序方法 大小写是否敏感 升序还是降序关键字)
 ```
-![[Pasted image 20260823112147.png]]
+![[photo/Pasted image 20260823112147.png]]
 
 # 宏定义
 ==主要作用：通过定义宏控制调试代码是否生效，并且不在源代码中定义宏，而是仅在测试阶段在Cmake上把宏定义出来触发调试代码，更方便日后发布不用频繁删减头文件==
@@ -331,7 +331,7 @@ add_difinitions(-D 宏的名称)
 3. 子节点的CmakeLists.txt只能在当前节点中使用
 **结构样例**
 
-![[Pasted image 20260823114534.png]]
+![[photo/Pasted image 20260823114534.png]]
 
 **根节点可以定义好，库路径，头文件路径，指定库生成路径等等的变量供其他节点使用**（但可读性差）
 
@@ -341,17 +341,17 @@ add_difinitions(-D 宏的名称)
 
 ## 添加子目录
 
-![[Pasted image 20260823114109.png|700]]
+![[photo/Pasted image 20260823114109.png|700]]
 后面两个参数一般不用
 
 ### **样例
 根节点：
-![[Pasted image 20260823115315.png]]
+![[photo/Pasted image 20260823115315.png]]
 calc节点：（把calc变为库）
-![[Pasted image 20260823120016.png]]
+![[photo/Pasted image 20260823120016.png]]
 text1节点：（利用calc库生成可执行程序）
 
-![[Pasted image 20260823120354.png]]
+![[photo/Pasted image 20260823120354.png]]
 
 
 # 引入第三方库的方法

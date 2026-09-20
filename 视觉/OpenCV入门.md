@@ -21,7 +21,7 @@ cv2.waitkey(等待时间（默认是一直等待）)#程序会停滞，等待按
 在OpenCV中，一张图片相当于存储三张灰度图，他们存储在图像中的最后一个维度中，**且OpenCV对颜色的存储顺序是BGR**
 刚好和RGB相反
 
-![[Pasted image 20260908194159.png]]
+![[photo/Pasted image 20260908194159.png]]
 
 ==彩色图像显示逻辑：当我们查看图像时，计算机会依次取出蓝绿红的灰度图，然后分别给屏幕的蓝色绿色红色芯片，这样就可以显示彩色图案了==
 
@@ -106,7 +106,7 @@ laplacian=cv2.laplacian(gray,cv2.CV_64F)#拉普拉斯梯度算子
 canny=cv2.Canny(gray,min,max)#canny边缘检测算法，指定梯度区间，如果梯度小于min则不是边缘，如果梯度大于min小于max，如果它和已知的边缘像素相连，那么它是边缘，否则不是，如果梯度大于max则它是边缘
 ```
 
-![[Pasted image 20260908204907.png]]
+![[photo/Pasted image 20260908204907.png]]
 
 
 # 阈值算法
@@ -149,7 +149,7 @@ kernel =np.ones((5,5),np.uint8)#内核
 erosion=cv2.erode(binary,kernel)#腐蚀
 dilation=cv2.dilate(binary,kernel)#膨胀
 ```
-![[Pasted image 20260908211917.png]]
+![[photo/Pasted image 20260908211917.png]]
 
                      腐蚀                    膨胀
 
